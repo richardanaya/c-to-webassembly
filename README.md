@@ -10,7 +10,7 @@ add to your sources appropriate sources
 sudo vim /etc/apt/sources.list
 ```
 
-http://apt.llvm.org/
+choose the right sources from http://apt.llvm.org/
 
 
 ```console
