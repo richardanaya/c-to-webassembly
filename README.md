@@ -28,7 +28,7 @@ My suggestion is starting with [`basic`](https://github.com/richardanaya/c-to-we
 
 # Interacting with the browser
 
-Web assembly comes with no built in ability to interact with the browser. You must create expose your own functions from javascript to your web assembly module to do anything. Nevertheless, a project [`js_ffi`](https://www.github.com/richardanaya/js_ffi) has a standardized interface that can be used for many actions.
+Web assembly comes with no built in ability to interact with the browser. You must expose your own functions from javascript to your web assembly module to do anything. To make interacting with browser simpler, a project [`js_ffi`](https://www.github.com/richardanaya/js_ffi) has a standardized interface that can be used for many actions.
 
 The header file can be found [here](https://github.com/richardanaya/js_ffi/blob/master/js_ffi.h)
 
