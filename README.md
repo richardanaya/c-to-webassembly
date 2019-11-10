@@ -1,24 +1,11 @@
-# llvm-8-wasm
+# llvm-9-wasm
 
-This is a simple project for compiling C with clang and llvm 8 to web assembly
+This is a simple project for compiling C with clang and llvm to web assembly
 
-First you will need to install dependencies:
+First you will need to install dependencies as per the LLVM website https://apt.llvm.org/
 
-add to your sources appropriate sources 
-
-```console
-sudo vim /etc/apt/sources.list
 ```
-
-choose the right sources from http://apt.llvm.org/
-
-
-```console
-sudo apt-get update
-sudo apt-get install llvm-8
-sudo apt-get install wasm-ld-8
-sudo apt-get install lld-8
-sudo apt-get install clang-8
+sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 ```
 
 Now you should be ready to build
