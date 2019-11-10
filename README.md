@@ -1,4 +1,4 @@
-# llvm-9-wasm
+# C -> Web Assembly
 
 This is a simple project for compiling C with 'clang' and 'llvm' to web assembly
 
