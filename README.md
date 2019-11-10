@@ -18,7 +18,7 @@ brew install llvm
 brew link --force llvm
 ```
 
-Now you should be ready to build
+Now you should be ready to build any example by going into their directory and running
 
 ```
 make
