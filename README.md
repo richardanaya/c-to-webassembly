@@ -1,6 +1,6 @@
 # C to Web Assembly
 
-This is a simple project for compiling C with `clang` and `llvm` to web assembly. This is a more direct approach than using `https://emscripten.org/`, but still has much value for learning.
+This is a simple project for compiling C with `clang` and `llvm` to web assembly. This is a more direct approach than using [Emscripten](`https://emscripten.org/`) that comes with the trade off of not having standard library but also knowing exactly what is happening.
 
 First you will most likely need to install dependencies.
 
