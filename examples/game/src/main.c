@@ -3,11 +3,11 @@
 
 extern unsigned char __heap_base;
 
-int fn_init;
-int fn_render;
-int fn_width;
-int fn_height;
-int fn_loop;
+JSValue fn_init;
+JSValue fn_render;
+JSValue fn_width;
+JSValue fn_height;
+JSValue fn_loop;
 JSValue hyperpixel;
 double width;
 double height;
