@@ -1,6 +1,6 @@
 build:
 	mkdir -p tmp/src
-	clang-9 src/main.c -S -emit-llvm --target=wasm32 -o tmp/src/main.ll
+	clang-9 src/main.c -I./ -S -emit-llvm --target=wasm32 -o tmp/src/main.ll
 	llvm-link-9 -o tmp/main.bc tmp/src/*\.ll
 	opt-9 -O3 tmp/main.bc -o tmp/main.bc
 	llc-9 -mtriple=wasm32-unknown-unknown -O3 -filetype=obj tmp/main.bc -o tmp/main.o

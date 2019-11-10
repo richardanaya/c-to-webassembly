@@ -30,15 +30,11 @@ My suggestion is starting with [`basic`](https://github.com/richardanaya/c-to-we
 
 Web assembly comes with no built in ability to interact with the browser. You must create expose your own functions from javascript to your web assembly module to do anything. Nevertheless, a project [`js_ffi`](https://www.github.com/richardanaya/js_ffi) has a standardized interface that can be used for many actions.
 
+The header file can be found [here](https://github.com/richardanaya/js_ffi/blob/master/js_ffi.h)
+
 ```C
 #define export __attribute__((visibility("default")))
-typedef double JSValue;
-extern int jsffiregister(char*);
-extern void jsfficall1(JSValue,int,int,JSValue);
-
-
-JSValue const UNDEFINED = 0.0;
-int const TYPE_STRING = 2;
+#include "./js_ffi.h"
 
 export int main() {
 	int log = jsffiregister("window.alert");
