@@ -50,4 +50,4 @@ See it working [here](https://richardanaya.github.io/c-to-webassembly/examples/w
 
 # Advanced
 
-[Demo](https://richardanaya.github.io/c-to-webassembly/examples/game/index.html) ([Source](https://github.com/richardanaya/c-to-webassembly/blob/master/examples/game/src/main.c))
+Use keyboard [Demo](https://richardanaya.github.io/c-to-webassembly/examples/game/index.html) ([Source](https://github.com/richardanaya/c-to-webassembly/blob/master/examples/game/src/main.c))
