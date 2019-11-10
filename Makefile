@@ -6,5 +6,7 @@ build:
 	llc-9 -mtriple=wasm32-unknown-unknown -O3 -filetype=obj tmp/main.bc -o tmp/main.o
 	wasm-ld-9 tmp/main.o -o main.wasm --no-entry --export-dynamic -allow-undefined
 	rm -rf tmp
+serve:
+	python3 -m http.server 8080
 lint:
 	clang-lint -i src/main.c
