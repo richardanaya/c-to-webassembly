@@ -1,6 +1,6 @@
 # C to Web Assembly
 
-This is a simple project for compiling C with `clang` and `llvm` to web assembly. This is a more direct approach than using `https://emscripten.org/`, but still has much value for learning.
+This is a simple project for compiling C with `clang` and `llvm` to web assembly. This is a more direct approach than using [Emscripten](https://emscripten.org/) that comes with the trade off of not having standard library but also knowing exactly what is happening.
 
 First you will most likely need to install dependencies.
 
@@ -28,7 +28,7 @@ My suggestion is starting with [`basic`](https://github.com/richardanaya/c-to-we
 
 # Interacting with the browser
 
-Web assembly comes with no built in ability to interact with the browser. You must create expose your own functions from javascript to your web assembly module to do anything. Nevertheless, a project [`js_ffi`](https://www.github.com/richardanaya/js_ffi) has a standardized interface that can be used for many actions.
+Web assembly comes with no built in ability to interact with the browser. You must expose your own functions from javascript to your web assembly module to do anything. To make interacting with browser simpler, a project [`js_ffi`](https://www.github.com/richardanaya/js_ffi) has a standardized interface that can be used for invoking javascript functions.
 
 The header file can be found [here](https://github.com/richardanaya/js_ffi/blob/master/js_ffi.h)
 
@@ -41,4 +41,8 @@ export int main() {
 	jsfficall1(UNDEFINED,log,TYPE_STRING,(JSValue)(int)&"Hello World!");
 	return 0;
 }
+```
+```html
+<script src="https://cdn.jsdelivr.net/gh/richardanaya/js_ffi/js_ffi.js"></script>
+<script>js_ffi.run("main.wasm");</script>
 ```
