@@ -21,7 +21,6 @@ JSValue const CONSOLE = 2.0;
 JSValue const WINDOW = 3.0;
 JSValue const DOCUMENT = 4.0;
 
-int const TYPE_STRING = 2;
 int const TYPE_NOTHING = 0;
 int const TYPE_NUM = 1;
 int const TYPE_STRING = 2;
