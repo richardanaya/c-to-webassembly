@@ -37,8 +37,8 @@ The header file can be found [here](https://github.com/richardanaya/js_ffi/blob/
 #include "./js_ffi.h"
 
 export int main() {
-	int log = jsffiregister("window.alert");
-	jsfficall1(UNDEFINED,log,TYPE_STRING,(JSValue)(int)&"Hello World!");
+	JSValue fn_log = jsffiregister("window.alert");
+	jsfficall1(UNDEFINED,fn_log,TYPE_STRING,(JSValue)(int)&"Hello World!");
 	return 0;
 }
 ```
