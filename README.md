@@ -1,4 +1,4 @@
-# C -> Web Assembly
+# C to Web Assembly
 
 This is a simple project for compiling C with 'clang' and 'llvm' to web assembly
 
