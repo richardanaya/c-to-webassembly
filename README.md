@@ -47,3 +47,7 @@ export int main() {
 <script>js_ffi.run("main.wasm");</script>
 ```
 See it working [here](https://richardanaya.github.io/c-to-webassembly/examples/window_alert/index.html)
+
+# Advanced
+
+[Demo](https://richardanaya.github.io/c-to-webassembly/examples/window_alert/index.html)([Source](https://github.com/richardanaya/c-to-webassembly/blob/master/examples/game/src/main.c))
