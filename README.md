@@ -23,3 +23,5 @@ Now you should be ready to build any example by going into their directory and r
 ```
 make
 ```
+
+My suggestion is starting with [`basic`](https://github.com/richardanaya/c-to-webassembly/blob/master/examples/basic/src/main.c)
