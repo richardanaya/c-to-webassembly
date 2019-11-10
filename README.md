@@ -1,6 +1,6 @@
 # llvm-9-wasm
 
-This is a simple project for compiling C with clang and llvm to web assembly
+This is a simple project for compiling C with 'clang' and 'llvm' to web assembly
 
 First you will need to install dependencies as per the LLVM website https://apt.llvm.org/
 
