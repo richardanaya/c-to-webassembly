@@ -24,12 +24,12 @@ Now you should be ready to build any example by going into their directory and r
 make
 ```
 
-My suggestion is starting with [`basic`](https://github.com/richardanaya/c-to-webassembly/blob/master/examples/basic/src/main.c)
+My suggestion is starting with [`basic`](https://github.com/richardanaya/c-to-webassembly/blob/master/examples/basic/)
 
 # Interacting with the browser
 
 Web assembly comes with no built in ability to interact with the browser. You must create expose your own functions from javascript to your web assembly module to do anything. Nevertheless, a project [`js_ffi`](https://www.github.com/richardanaya/js_ffi) has a standardized interface that can be used for many actions.
 
-```
+```C
 
 ```
