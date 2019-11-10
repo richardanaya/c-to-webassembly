@@ -1,7 +1,10 @@
 #define export __attribute__((visibility("default")))
 #include "./js_ffi.h"
 
+extern unsigned char __heap_base;
+
 export int main() {
+	__builtin_wasm_memory_grow(0,64);
 	int fn_init = jsffiregister("\
 		(selector)=>{\
 			return new HyperPixel(document.querySelector(selector));\
@@ -27,20 +30,17 @@ export int main() {
 	JSValue hyperpixel = jsfficall1(JS_UNDEFINED,fn_init,TYPE_STRING,(JSValue)(int)&"#screen");
 	double width = (int)jsfficall0(hyperpixel,fn_width);
 	double height = (int)jsfficall0(hyperpixel,fn_height);
-	int pixels_mem_start = 0;
-	float *pixel = (float*)pixels_mem_start;
+	float *pixel = (float*)&__heap_base;
 	int len = width*height*3.0;
-	for(int i=0;i<len;i++){
-		int x = i%(int)width;
-		int y = i/(int)height;
-		pixel[i] = y/height;
+	for(int x=0;x<width;x++){
+		for(int y=0;y<height;y++){
+			//int p = (y*600+x);
+			int p = (((y*width)+x)*3);
+			pixel[p] = x/width;
+			pixel[p+1] = y/height;
+			pixel[p+2] = 0;
+		}
 	}
-	pixel[0] = 1;
-	pixel[1] = 0;
-	pixel[2] = 0;
-	pixel[len-3] = 1;
-	pixel[len-2] = 0;
-	pixel[len-1] = 0;
-	jsfficall3(hyperpixel,fn_render,TYPE_MEMORY,0,TYPE_NUM,pixels_mem_start,TYPE_NUM,len);
+	jsfficall3(hyperpixel,fn_render,TYPE_MEMORY,0,TYPE_NUM,(int)pixel,TYPE_NUM,len);
 	return 0;
 }
