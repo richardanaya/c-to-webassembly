@@ -1,3 +1,4 @@
+typedef int JSFunction;
 typedef double JSValue;
 extern void jsffirelease(JSValue);
 extern int jsffiregister(char*);
